@@ -1,0 +1,138 @@
+body {
+  margin: 0;
+  background-image: url(imagens/pexels-layanne-17189429.jpg);
+  background-position: center;
+  text-align: center;
+  background-size: 100%; /* ou utilize 'cover' dependendo do efeito desejado */
+  background-attachment: fixed;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Estilos para dispositivos com largura de tela até 600 pixels */
+@media screen and (max-width: 600px) {
+  body {
+    background-size: 500px; /* ou ajuste conforme necessário para telas menores */
+  }
+
+  #carrinho {
+    top: 80px; /* Ajuste a posição do carrinho para evitar sobreposição com outros elementos */
+  }
+}
+
+main {
+  padding: 20px;
+}
+
+#produtos {
+  text-align: center;
+}
+
+#produtos ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#produtos li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+#produtos li img {
+  max-height: 100px;
+  margin-bottom: 10px;
+}
+
+#produtos span {
+  color: #ffffff;
+}
+
+#carrinho-tab {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background-color: #000000;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+#carrinho-tab:hover {
+  background-color: #494343;
+}
+
+#carrinho {
+  display: none;
+  position: fixed;
+  top: 50px;
+  right: 10px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 5px;
+  z-index: 999;
+}
+
+#carrinho h2 {
+  margin-bottom: 10px;
+}
+
+#total-carrinho {
+  font-weight: bold;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  font-size: 16px;
+  background-color: #ffffff;
+  color: #000000;
+  padding: 5px 10px;
+  border-radius: 3px;
+}
+
+button:hover {
+  background-color: #424246;
+}
+
+button:active {
+  background-color: #595b5e;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  background-color: #3c4247;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+nav ul li a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+}
+
+nav ul li a:hover {
+  background-color: #fff;
+  color: #0053A0;
+}

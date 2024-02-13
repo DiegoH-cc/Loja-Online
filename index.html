@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <link rel="shortcut icon" href="imagens/logo.jpg" type="image/x-icon">
+    <title>Carrinho de compras</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Início</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Produtos</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Carrinho de Compras</h1>
+        <div id="produtos">
+            <h2>Produtos</h2>
+            <ul>
+                <li>
+                    <span>Camisa</span>
+                    <span>R$ 329.90</span>
+                    <img src="./imagens/camisa.jpg">
+                    <button onclick="adicionarProduto('Camisa', 329.90, './imagens/camisa.jpg')">Adicionar ao Carrinho</button>
+                </li>
+                <li>
+                    <span>Conjunto de Peças</span>
+                    <span>R$ 399.90</span>
+                    <img src="./imagens/conjunto.jpg">
+                    <button onclick="adicionarProduto('conjunto', 399.90, './imagens/conjunto.jpg')">Adicionar ao Carrinho</button>
+                </li>
+                <li>
+                    <span>Boné</span>
+                    <span>R$ 99.00</span>
+                    <img src="./imagens/bone.jpg">
+                    <button onclick="adicionarProduto('Boné', 99.00, './imagens/bone.jpg')">Adicionar ao Carrinho</button>
+                </li>
+            </ul>
+        </div>
+        <div id="carrinho-tab" onclick="toggleCarrinho()">Carrinho</div>
+        <div id="carrinho">
+            <h2>Carrinho de Compras</h2>
+            <ul id="lista-carrinho"></ul>
+            <p>Total: R$ <span id="total-carrinho">0</span></p>
+            <div id="paypal-button-container"></div>
+        </div>
+    </main>
+
+    <script src="https://www.paypal.com/sdk/js?client-id=AXTUsh_VKLZ6hXjQ500lcaKAOKIQ7CKFM-yohSFecpPlVNIj4Z-S8O3nSG2U3O7dDoB33rxN5YpMJtVb"></script>
+    <script src="main.js"></script>
+</body>
+</html>
